@@ -15,17 +15,23 @@ body,html
 }
 .in
 {
-  align-items: center;
+  /* align-items: center; */
   border-radius: 5px;
-  margin: 5px 300px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  margin: 5px;
+  margin-left: 20px;
+  padding: 20px 5px;
+
   font-size: 10px;
 
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   background-color: #f7f7e8;
-  flex-direction: column;
+  flex-direction: row;
+}
+.form-control
+{
+  margin-left: 5px;
+  margin-right: 5px;
 }
 /* .container p:hover{
   font-size: 32px;
@@ -36,13 +42,14 @@ body,html
   margin-top: 70px;
   position: relative;
 
+
   margin-bottom: 10px;
 }
-.box1 , .box2 , .box3 , .box4
+.box1 , .box2 , .box3 , .box4 , .box5 , .box6
 {
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: 230px;
+  height: 230px;
   background-color:#1597bb;
   border: 3px solid #111;
   border-radius: 7px;
@@ -50,31 +57,42 @@ body,html
 
 .box1
 {
-  left:170px;
+  left:120px;
+  top: 80px;
+
+}
+.box2
+{
+  left:570px;
   top: 80px;
 
 }
 .box3
 {
-  right:170px;
+  left:1000px;
   top: 80px;
 }
-.box2
-{
-  left:340px;
-  top: 400px;
 
-}
 
 .box4
 {
-  right: 340px;
+  left: 120px;
   top: 400px;
 }
-.box1:hover , .box2:hover , .box3:hover , .box4:hover
+.box5
 {
-  width: 210px;
-  height: 210px;
+  left: 570px;
+  top: 400px;
+}
+.box6
+{
+  left: 1000px;
+  top: 400px;
+}
+.box1:hover , .box2:hover , .box3:hover , .box4:hover ,.box5:hover,.box6:hover
+{
+  width: 233px;
+  height: 233px;
   cursor: pointer;
   background-color:#007580;
 }
