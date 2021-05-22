@@ -90,10 +90,40 @@ app.get("/", function(req, res) {
       ////enter your code here!!!!!!!!!!!!!!!!!!
       //// arr1 has p1's value and so on
 
+      var bottleneck=0;
+      var process = [arr1,arr2,arr3,arr4,arr5,arr6];
+      var bottleneck_value=99999999;
+      var prev = 1;
+      for(var i=0;i<6;i++)
+      {
+        var temp=(process[i][4]/prev)*process[i][1]/process[i][2];
+        if(temp<bottleneck_value)
+        {
+          bottleneck = i;
+          bottleneck_value = temp;
+        }
+        prev = process[i][4];
+      }
 
+      for(var i=0;i<6;i++)
+      {
+        if(i!=bottleneck){
+          process[i][5] = (process[i][0]+process[i][1])/2;
+          process[i][6] = process[i][5]/bottleneck_value;
 
+        }
+        else{
+          process[i][5]=process[i][0];
+          process[i][6]=process[i][3];
+        }
+        }
 
+      console.log("bottleneck ", bottleneck,"  ","bottleneck_value ",bottleneck_value);      
+for(var i=0;i<6;i++)
+{
 
+      console.log("process ",i," : ",process[i][5],"  ",process[i][6]);
+}
 
 
 
