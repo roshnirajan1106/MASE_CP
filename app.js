@@ -31,7 +31,7 @@ app.get("/", function(req, res) {
   } else if (arr2.length === 0) {
     res.render("index", {
       title: "Enter all the details",
-      arr1: "",
+      arr1: "max_vol  :  " + arr1[0] + " ,  min_vol   :   " + arr1[1]+ " , max time :   " + arr1[2] + " , min time :  " +arr1[3] + " ,  delta vol : "+ arr1[4],
       arr2: "enter p2 details",
       arr3: "",
       arr4: "",
@@ -41,8 +41,8 @@ app.get("/", function(req, res) {
   } else if (arr3.length === 0) {
     res.render("index", {
       title: "Enter all the details",
-      arr1: "",
-      arr2: "",
+      arr1: "max_vol  :  " + arr1[0] + " ,  min_vol   :   " + arr1[1]+ " , max time :   " + arr1[2] + " , min time :  " +arr1[3] + " ,  delta vol : "+ arr1[4],
+      arr2: "max_vol  :  " + arr2[0] + " ,  min_vol   :   " + arr2[1]+ " , max time :   " + arr2[2] + " , min time :  " +arr2[3] + " ,  delta vol : "+ arr2[4],
       arr3: "enter p3 details",
       arr4: "",
       arr5: "",
@@ -51,9 +51,9 @@ app.get("/", function(req, res) {
   } else if (arr4.length === 0) {
     res.render("index", {
       title: "Enter all the details",
-      arr1: "",
-      arr2: "",
-      arr3: "",
+      arr1: "max_vol  :  " + arr1[0] + " ,  min_vol   :   " + arr1[1]+ " , max time :   " + arr1[2] + " , min time :  " +arr1[3] + " ,  delta vol : "+ arr1[4],
+      arr2: "max_vol  :  " + arr2[0] + " ,  min_vol   :   " + arr2[1]+ " , max time :   " + arr2[2] + " , min time :  " +arr2[3] + " ,  delta vol : "+ arr2[4],
+      arr3: "max_vol  :  " + arr3[0] + " ,  min_vol   :   " + arr3[1]+ " , max time :   " + arr3[2] + " , min time :  " +arr3[3] + " ,  delta vol : "+ arr3[4],
       arr4: "enter p4 details",
       arr5: "",
       arr6: ""
@@ -61,21 +61,21 @@ app.get("/", function(req, res) {
   } else if (arr5.length === 0) {
     res.render("index", {
       title: "Enter all the details",
-      arr1: "",
-      arr2: "",
-      arr3: "",
-      arr4: "",
+      arr1: "max_vol  :  " + arr1[0] + " ,  min_vol   :   " + arr1[1]+ " , max time :   " + arr1[2] + " , min time :  " +arr1[3] + " ,  delta vol : "+ arr1[4],
+      arr2: "max_vol  :  " + arr2[0] + " ,  min_vol   :   " + arr2[1]+ " , max time :   " + arr2[2] + " , min time :  " +arr2[3] + " ,  delta vol : "+ arr2[4],
+      arr3: "max_vol  :  " + arr3[0] + " ,  min_vol   :   " + arr3[1]+ " , max time :   " + arr3[2] + " , min time :  " +arr3[3] + " ,  delta vol : "+ arr3[4],
+      arr4: "max_vol  :  " + arr4[0] + " ,  min_vol   :   " + arr4[1]+ " , max time :   " + arr4[2] + " , min time :  " +arr4[3] + " ,  delta vol : "+ arr4[4],
       arr5: "enter p5 details",
       arr6: ""
     });
   } else if (arr6.length === 0) {
     res.render("index", {
       title: "Enter all the details",
-      arr1: "",
-      arr2: "",
-      arr3: "",
-      arr4: "",
-      arr5: "",
+      arr1: "max_vol  :  " + arr1[0] + " ,  min_vol   :   " + arr1[1]+ " , max time :   " + arr1[2] + " , min time :  " +arr1[3] + " ,  delta vol : "+ arr1[4],
+      arr2: "max_vol  :  " + arr2[0] + " ,  min_vol   :   " + arr2[1]+ " , max time :   " + arr2[2] + " , min time :  " +arr2[3] + " ,  delta vol : "+ arr2[4],
+      arr3: "max_vol  :  " + arr3[0] + " ,  min_vol   :   " + arr3[1]+ " , max time :   " + arr3[2] + " , min time :  " +arr3[3] + " ,  delta vol : "+ arr3[4],
+      arr4: "max_vol  :  " + arr4[0] + " ,  min_vol   :   " + arr4[1]+ " , max time :   " + arr4[2] + " , min time :  " +arr4[3] + " ,  delta vol : "+ arr4[4],
+      arr5: "max_vol  :  " + arr5[0] + " ,  min_vol   :   " + arr5[1]+ " , max time :   " + arr5[2] + " , min time :  " +arr5[3] + " ,  delta vol : "+ arr5[4],
       arr6: "enter p6 details"
     });
   } else {
@@ -118,7 +118,7 @@ app.get("/", function(req, res) {
         }
         }
 
-      console.log("bottleneck ", bottleneck,"  ","bottleneck_value ",bottleneck_value);      
+      console.log("bottleneck ", bottleneck,"  ","bottleneck_value ",bottleneck_value);
 for(var i=0;i<6;i++)
 {
 
