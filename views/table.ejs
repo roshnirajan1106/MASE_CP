@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Table - Final calculation </title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <table style="width:100%">
+
+    <tr>
+      <th>Serial no.</th>
+      <th>Max Volume</th>
+      <th>Min Volume</th>
+      <th>Max Time</th>
+      <th>Min Time</th>
+      <th>Delta Volume</th>
+      <th>Proposed Volume</th>
+      <th>Proposed Speed</th>
+      <th></th>
+    </tr>
+
+    <% for (var i = 0; i < list.length;  i++) { %>
+      <tr>
+          <td><%= i+1 %></td>
+      <% for (var j = 0; j < 7;  j++) { %>
+
+
+      <td><%= list[i][j] %></td>
+
+    <% } %>
+        </tr>
+      <% } %>
+  </table>
+  </body>
+</html>

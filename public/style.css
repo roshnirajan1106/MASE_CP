@@ -123,3 +123,14 @@ width: 100%;
 
   border-radius: 7px;
 }
+
+table, th, td {
+  margin: 25px;
+  border: 1px solid black;
+}
+table
+{
+  margin-top: 100px;
+  margin-left: 24px;
+  margin-right: 24px;
+}

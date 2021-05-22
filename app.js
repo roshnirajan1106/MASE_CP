@@ -90,54 +90,48 @@ app.get("/", function(req, res) {
       ////enter your code here!!!!!!!!!!!!!!!!!!
       //// arr1 has p1's value and so on
 
-      var bottleneck=0;
       var process = [arr1,arr2,arr3,arr4,arr5,arr6];
-      var bottleneck_value=99999999;
-      var prev = 1;
-      for(var i=0;i<6;i++)
-      {
-        var temp=(process[i][4]/prev)*process[i][1]/process[i][2];
-        if(temp<bottleneck_value)
-        {
-          bottleneck = i;
-          bottleneck_value = temp;
-        }
-        prev = process[i][4];
-      }
+     var bottleneck = 999999;
+     var bottleneck_process = -1;
+     for(var i=0;i<6;i++)
+     {
+       var temp = process[i][0]/process[i][3];
+       if(bottleneck>=temp)
+       {
+         bottleneck = temp;
+         bottleneck_process = i;
+       }
+     }
 
-      for(var i=0;i<6;i++)
-      {
-        if(i!=bottleneck){
-          process[i][5] = (process[i][0]+process[i][1])/2;
-          process[i][6] = process[i][5]/bottleneck_value;
+     for(var i=0;i<6;i++)
+     {
+       if(i!=bottleneck_process)
+       {
+         var temp_v = (process[i][0]+process[i][1])/2;
+         var temp_t = (temp_v/bottleneck)*(process[bottleneck_process][4]/process[i][4]);
+         process[i][5] = temp_v;
+         process[i][6] = temp_t;
+       }
+       else{
+         process[i][5] = process[i][0];
+         process[i][6] = process[i][3];
+       }
+     }
 
-        }
-        else{
-          process[i][5]=process[i][0];
-          process[i][6]=process[i][3];
-        }
-        }
-
-      console.log("bottleneck ", bottleneck,"  ","bottleneck_value ",bottleneck_value);
+          console.log("bottleneck ", bottleneck,"  ","bottleneck_Process ",bottleneck_process);
 for(var i=0;i<6;i++)
 {
 
-      console.log("process ",i," : ",process[i][5],"  ",process[i][6]);
+     console.log("process ",i," : ",process[i][5],"  ",process[i][6]);
 }
 
 
 
 
-      res.render("index", {
-        title: "Hold On!",
-        arr1: "",
-        arr2: "",
-        arr3: "",
-        arr4: "",
-        arr5: "",
-        arr6: ""
-      });
-    }, 7000);
+
+
+  res.render("table" , {list : process});
+}, 3000);
 
   }
 
